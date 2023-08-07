@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="card">
+      <h2>profile</h2>
+      <form id="form" enctype="multipart/form-data" method="post"  action="/upload">
+        <input name="image" type="file" id="file">
+      </form>
+      <div class="photo">
+        <img src="../images/uploads/<%= loggedinuser.profileimg %>" alt="">
+      </div>
+      <i id="close" class="ri-close-circle-line"></i>
+    </div>
+    <div class="nav">
+      <div class="left">
+        <img src="./images/logo.png" alt="">
+        <h2>BidVilla.com</h2>
+        <div class="links">
+          <a href="/mybids">My bids</a>
+          <a href="/myproducts">My listed products</a>
+          <a href="/logout">logout</a>
+        </div>
+      </div>
+      <div class="right">
+        <button class="btn"><a href="/createproduct">Add product</a></button>
+        <div class="circle"><i class="ri-menu-line"></i></div>
+      </div>
+    </div>
+    <div class="search">
+      <div class="overlay">
+        <div class="centext">
+          <h1>Welcome to BidVilla</h1>
+          
+          <div class="one">
+            <input id="input" type="text" placeholder="Search for products">
+            <div class="srhbtn">
+              <a href="">search</a>
+            </div>
+          </div>
+          <div class="showitems">
+           
+          </div>
+        </div>
+      </div>
+      <img
+        src="https://media.istockphoto.com/photos/business-technology-internet-and-network-concept-attorney-at-law-picture-id1206961223?k=20&m=1206961223&s=612x612&w=0&h=BM9Jh_qhKSQlEbP83AUUicITb7oMp6J5bAx12dT7rAw="
+        alt="">
+    </div>
+    <h2>Just Four Easy steps </h2>
+    <div class="steps">
+      <div class="box">
+        <img src="/images/search.png" alt="">
+        <h4>Search for the bids</h4>
+        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Id doloremque doloribus <br> est vero atque.
+        </p>
+      </div>
+      <div class="box">
+        <img id="bid" src="/images/bid.png" alt="">
+        <h4>Bid on your favourite products</h4>
+        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Id doloremque doloribus <br> est vero atque.
+        </p>
+      </div>
+      <div class="box">
+        <img id="wait" src="/images/wait.png" alt="">
+        <h4>Wait for the bids to end</h4>
+        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Id doloremque doloribus <br> est vero atque.
+        </p>
+      </div>
+      <div class="box">
+        <img id="pay" src="/images/onlinepay.png" alt="">
+        <h4>Pay directly from the mobile</h4>
+        <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Id doloremque doloribus <br> est vero atque.
+        </p>
+      </div>
+    </div>
+    <h2 id="Lp">Latest products for biding</h2>
+    <div class="products">
+      
+      <% var products = createdproducts %>
+      <% createdproducts.forEach(function(elem){ %>
+        <% if(loggedinuser.product.indexOf(elem._id) != -1) { %>
+        
+       <% } else {  %>
+          <div class="product">
+            <div class="top">
+              
+              <div id="demo" class="time"><%= elem.status %></div>
+              <img src="<%= elem.img%>" alt="">
+            </div>
+            <div class="btm">
+              <h3>
+                <%=elem.name%>
+              </h3>
+              <h4>
+                <%=elem.price%>
+              </h4>
+              <button class="bid"><a href="/prodesc/<%= elem._id %>">Bid now</a></button>
+            </div>
+          </div>
+        <% } %>
+        <% }) %>   
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    document.querySelector(".one input").addEventListener("input" , function(){
+      // console.log(this.value)
+      if(this.value.length> 0){
+        axios.get(`/product/${this.value}`)
+        .then(function(foundproduct){
+          // console.log(foundproduct)
+          var clutter = ""
+          foundproduct.data.forEach(element => {
+            clutter += `<div class="item"> 
+              <h3> <a href="/prodesc/${element._id}"> ${element.name} </a> </h3>
+            </div>`
+          })
+          // document.querySelector(".showitems").style.display = "initial";
+          document.querySelector(".showitems").innerHTML = clutter;
+        })
+      }
+      else {
+        document.querySelector(".showitems").textContent = ""
+      }
+    })
+ 
+    document.querySelector(".photo").addEventListener("click" , function(){
+      document.querySelector("#file").click();
+    })
+
+    document.querySelector("#file").addEventListener("change" , function(){
+      document.querySelector("#form").submit();
+    })
+
+    document.querySelector(".circle").addEventListener("click" , function(){
+      document.querySelector(".card").style.display = "flex";
+      document.querySelector(".card").style.right = "0%";
+    })
+
+    document.querySelector("#close").addEventListener("click" , function(){
+      document.querySelector(".card").style.right = "-30%";
+      document.querySelector(".card").style.display = "none";
+    });
+
+    // Time
+    // axios.get(`/pro`)
+    //     .then(function(foundproduct){
+    //       console.log(foundproduct.data)
+    
+    //     });
+      //  console.log(new Date().getDate())
+     
+ </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.products{
+    padding: 20px 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+  }
+  
+  .product{
+    /* height: 350px; */
+    width: 280px;
+    /* background-color: red; */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.275);
+    margin-right: 60px;
+    margin-top: 40px;
+  }
+  
+  .product .top{
+    height: 150px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .product .top img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .btm{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btm h3{
+    font-size: 17px;
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #222;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .btm h4{
+    font-size: 16px;
+    font-family: "gilroy";
+    font-weight: 500;
+    text-transform: capitalize;
+    color: black;
+    margin-bottom: 12px;
+  }
+  
+  .bid{
+    padding: 7px 20px;
+    background-color: #03426A;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .bid a{
+    font-size: 13px;
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    color: white;
+    outline: none;
+  }
+
+#back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back {
+  font-family: "gilroy";
+  font-weight: 600;
+  padding: 8px 30px;
+  border-radius: 6px;
+  text-transform: capitalize;
+  text-decoration: none;
+  background-color: #03426A;
+  color: white;
+  /* display: block; */
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bids {
+  width: 100%;
+  padding: 20px 40px;
+}

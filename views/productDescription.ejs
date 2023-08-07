@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/prodesc.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="prodesc">
+
+            <div class="leftimg">
+                <img src="<%=product.img%>" alt="">
+            </div>
+            <div class="rightdesc">
+                <div class="text">
+                    <h2>
+                        <%= product.name %>
+                    </h2>
+                    <p>
+                        <%= product.description %>
+                    </p>
+                    <h3> Price : <%= product.price %>
+                    </h3>
+                    <div class="features">
+                        <h4>features :</h4>
+                        <div class="two">
+                            <div class="one">
+                                <li>4 years Warranty </li>
+                                <li>100% Original</li>
+                            </div>
+                            <div class="second">
+                                <li>4 years Warranty </li>
+                                <li>100% Original</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="biding">
+                        <form method="post" action="/userbid/<%=product._id %>">
+                            <input id="text" name="price" type="text" placeholder="">
+                            <input id="bid" type="submit" value="Bid Now">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bids">
+            <h2>all bids</h2>
+            <div class="allbids">
+                <% product.bids.forEach(function(bid){ %>
+                <div class="bidone">
+                    <div class="left1">
+                        <div class="profilepic">
+                            <img src="../images/uploads/<%= bid.userimg %>" alt="">
+                        </div>
+
+                            <h2><%= bid.username %></h2>
+                        </div>
+                        <div class="right1">
+                            
+                            <h3>Bid Price : <%= bid.price %> </h3>
+                            
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

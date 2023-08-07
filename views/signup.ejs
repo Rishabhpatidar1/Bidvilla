@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <h2 id="webname" >BidVilla</h2>
+            <div class="text">
+                <h1>welcome back</h1>
+                <p>To Keep Connected With Us Please Login with your professional info</p>
+                <button class="btn" ><a href="/signin">Sign In</a></button>
+            </div>
+            <img src="/images/signup.png" alt="" id="signup">
+        </div>
+        <div class="right">
+            <div class="text2">
+                <h1>create account</h1>
+               
+                <form method="post" action="/register">
+                    <div id="first" class="bara" >
+                        <div class="sm" >
+                            
+                            <div class="box">
+                                <i class="ri-user-fill"></i>
+                            </div>
+                            <input name="username" autocomplete="off" class="name" type="text" placeholder="First Name">
+                        </div>
+
+                        <div class="sm" >
+                            
+                            <div class="box">
+                                <i class="ri-user-fill"></i>
+                            </div>
+                            <input name="lastname" autocomplete="off" class="name" type="text" placeholder="Last Name">
+                        </div>
+
+                    </div>
+                    <div class="bara" >
+                        <div class="box">
+                            <i class="ri-mail-fill"></i>
+                        </div>
+                        <input name="email" autocomplete="off" required type="email" placeholder="Email">
+                    </div>
+                    <div class="bara" >
+                        <div class="box">
+                            <i class="ri-lock-fill"></i>
+                        </div>
+                        <input name="password" autocomplete="off" required type="text" placeholder="Password">
+
+                    </div>
+                    <div class="bara">
+                        <div class="box">
+                            <i class="ri-building-4-fill"></i>
+                        </div>
+                        <input name="city" autocomplete="off" type="text" placeholder="City Name">
+
+                    </div>
+                    
+                    
+                    <button class="btn" ><a>Sign Up</a></button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

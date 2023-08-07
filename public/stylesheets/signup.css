@@ -1,0 +1,186 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow:hidden;
+}
+
+.left{
+    width: 50%;
+    height: 100vh;
+    background-color: #03426A;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.left #webname{
+    font-family: "gilroy";
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.left h1{
+    font-family: "gilroy";
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.left p{
+    font-family: "gilroy";
+    font-weight: 400;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.text button{
+    margin-top: 15px;
+    padding: 7px 30px;
+    background-color: white;
+    border-radius: 100px;
+    border: none;
+}
+
+.text button a{
+    font-size: 16px;
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #03426A;
+    border: none;
+    outline: none;
+}
+
+#signup{
+    position: absolute;
+    bottom: -6%;
+    left: 50%;
+    transform: translate(-50% ,0%);
+}
+
+.right{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right h1{
+    font-family: "gilroy";
+    font-weight: 600;
+    color: #03426A;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.right .text2 h1{
+    text-align: center;
+}
+
+form{
+    margin-top: 50px;
+    
+}
+
+input{
+    height: 30px;
+    width: 400px;
+    font-family: "gilroy";
+    font-weight: 500;
+    color: black;
+    padding: 0px 14px;
+    outline: none;
+    letter-spacing: 1px;
+    /* border: 1px solid #35ae91; */
+    border: 1px solid #999;
+    display: block;
+    /* background-color: #f5fefa; */
+}
+
+
+.text2 button{
+    margin-top: 15px;
+    padding: 7px 30px;
+    background-color: #03426A;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.text2 button a{
+    font-size: 16px;
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+   cursor: pointer;
+   
+}
+
+.box{
+    height: 30px;
+    width: 30px;
+    background-color: #03426A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box i{
+    color: white;
+}
+
+.bara{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.name{
+    width: 140px;
+}
+
+#first{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sm{
+    display: flex;
+    
+}

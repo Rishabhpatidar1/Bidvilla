@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+   <div class="main">
+    <div class="left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="786.704" height="1380.816" viewBox="0 0 786.704 1380.816">
+            <path id="Path_5" data-name="Path 5" d="M1978,2572s27.421,376.667,177.4,444.627c97.638,44.242,273.736,61.669,419,224.874,77.922,87.548,146.958,216.968,190.305,414.892-465.223,666.951-786.7,0-786.7,0Z" transform="translate(-1978 -2572)" fill="#03426a"/>
+          </svg>
+          
+
+          <img src="/images/login.png" alt="" id="loginimg">
+    </div>
+    <div class="right">
+        <div class="text3">
+            <h1>sign in</h1>
+            <form method="post" action="/login">
+                <div class="bara" >
+                    <div class="box">
+                        <i class="ri-mail-fill"></i>
+                    </div>
+                    <input autocomplete="off" required type="text" name="username" placeholder="Username">
+                </div>
+                <div class="bara" >
+                    <div class="box">
+                        <i class="ri-lock-fill"></i>
+                    </div>
+                    <input autocomplete="off" required type="text" name="password" placeholder="Password">
+                </div>
+                
+                <div class="links" >
+                    <p><a id="forgot" href="">Forgot Your Password ?</a></p>
+                    <p><a id="forgot" href="/signup"> new to BidVilla ?</a></p>
+                </div>
+
+                <button type="submit" class="btn" ><a>Login</a></button>
+                <div id="line" >
+                    <hr>
+                    <p>or login with</p>
+                    <hr>
+                </div>
+
+                <div class="reg">
+                    <div class="google"><a href=""><i class="ri-google-fill"></i></a></div>
+                    <div class="google"><a href=""><i class="ri-facebook-fill"></i></a></div>
+                    <div class="google"><a href=""><i class="ri-linkedin-fill"></i></a></div>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+   </div>
+</body>
+</html>

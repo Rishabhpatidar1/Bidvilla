@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.bids {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.bids h2 {
+    font-size: 30px;
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    color: black;
+}
+
+.allbids{
+    display: flex;
+}
+
+.bidone {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.158);
+    margin-top: 24px;
+    border-radius: 9px;
+    margin-right: 20px;
+}
+
+.left1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left1 h2 {
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    /* margin-left: 14px; */
+    margin-top: 10px;
+}
+
+.profilepic {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.profilepic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.right1 h3 {
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    /* color: white; */
+    color: #444;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.alert {
+    font-family: "gilroy";
+    font-weight: 600;
+    text-transform: capitalize;
+    color: red !important;
+    text-align: center;
+}
+
+.back {
+    font-family: "gilroy";
+    font-weight: 600;
+    padding: 8px 30px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    text-decoration: none;
+    background-color: #03426A;
+    color: white;
+    /* display: block; */
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+#back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#delete{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+}
+
+#del{
+    background-color: rgb(234, 60, 60);
+}

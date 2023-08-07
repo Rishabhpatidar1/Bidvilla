@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/mybids.css">
+</head>
+<body>
+
+  <div class="bids">
+
+
+  <div class="items">
+    <h2>Products you bided on</h2>
+    <div id="back">
+        <a class="back" href="/home">Go back</a>
+    </div>
+</div>
+
+        <% loggedinuser.bidedprd.forEach(function(elem){ %>
+            <div class="product">
+                <div class="top">
+                    
+                    <img src="<%= elem.img%>" alt="">
+        </div>
+        <div class="btm">
+          <h3>
+            <%=elem.name%>
+          </h3>
+          <h4>
+            price:
+              <%=elem.price%>
+            </h4>
+            <div class="buttons">
+                <button class="bid"><a href="/minebid/<%= elem._id %>">Your bids</a></button>
+                <button class="bid"><a href="/prodesc/<%= elem._id %>">View Product</a></button>
+            </div>
+        </div>
+    </div>
+    
+    <% }) %>
+</div>
+</div>
+</body>
+</html>

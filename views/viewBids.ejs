@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/viewBid.css">
+</head>
+
+<body>
+    <div class="bids">
+        <% if(product.bids.length>0){ %>
+            <div class="items">
+                <h2>all bids</h2>
+                <div id="back">
+                    <a class="back" href="/myproducts">Go back</a>
+                </div>
+            </div>
+
+            <div class="allbids">
+                <% product.bids.forEach(function(bid){ %>
+                    <div class="bidone">
+                        <div class="left1">
+                            <div class="profilepic">
+                                <img src="../images/uploads/<%= bid.userimg %>" alt="">
+                            </div>
+
+                            <h2>
+                                <%= bid.username %>
+                            </h2>
+                        </div>
+                        <div class="right1">
+
+                            <h3>Bid Price : <%= bid.price %>
+                            </h3>
+
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <h2 class="alert">Sorry ! No Bids yet </h2>
+            <div id="back">
+
+                <a class="back" href="/myproducts">Go back</a>
+            </div>
+        <% } %>
+   </div>
+</body>
+
+</html>
